@@ -1,0 +1,26 @@
+<div class="container">
+  <form #form="ngForm" (ngSubmit)="submitForm() " class="whole">
+  <h2>PATIENT FORM</h2>
+<label>NAME:
+<input type="text" name="name" [(ngModel)]="name" required minlength="3" #nameField="ngModel"></label>
+<div *ngIf="nameField.invalid&&nameField.touched" style="color:red">
+<div *ngIf="nameField.errors?.['required']">required</div>
+ <div *ngIf="nameField.errors?.['minlength']">minimum 3</div>
+</div>
+
+ <label>AGE:
+<input type="number" name="age" [(ngModel)]="age" required min="1"max="120" #ageField="ngModel"></label>
+<div *ngIf="ageField.invalid&&ageField.touched" style="color:red">
+  <div *ngIf="ageField.errors?.['required']">required</div>
+   <div *ngIf="ageField.errors?.['min']">min 1</div>
+    <div *ngIf="ageField.errors?.['max']">max 120</div>
+</div>
+
+  <button type="submit"[disabled]="form.invalid" [ngStyle]="{
+    backgroundColor:form.valid?'green':'red',color:'white',padding:'10px',font:'bold'
+  }">Submit</button>
+
+
+</form>
+</div>
+

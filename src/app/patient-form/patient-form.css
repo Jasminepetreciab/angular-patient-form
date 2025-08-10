@@ -1,0 +1,20 @@
+*{
+    margin:0%;
+    padding:0%;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.whole{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content:space-evenly;
+    background-color: antiquewhite;
+    height: 400px;
+    width: 400px;
+}
