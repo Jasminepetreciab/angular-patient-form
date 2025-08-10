@@ -28,6 +28,7 @@ export class PatientForm {
       .post('https://jsonplaceholder.typicode.com/posts', {
         name: this.name,
         age: this.age,
+         
       })
       // this.http
       // .get('https://jsonplaceholder.typicode.com/posts/1')
